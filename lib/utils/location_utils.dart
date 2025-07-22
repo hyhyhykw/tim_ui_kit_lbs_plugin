@@ -1,6 +1,6 @@
 import 'dart:async';
 import 'dart:io' show Platform;
-import 'package:geolocator/geolocator.dart';
+// import 'package:geolocator/geolocator.dart';
 import 'package:permission_handler/permission_handler.dart';
 import 'package:tim_ui_kit_lbs_plugin/utils/tim_location_model.dart';
 import 'package:tim_ui_kit_lbs_plugin/utils/utils.dart';
@@ -38,11 +38,11 @@ class LocationUtils {
   static Future<TIMCoordinate?> getAddressByFlutter() async {
     final isAvailable = await LocationUtils.requestLocationPermission();
     if(isAvailable == true){
-      final position = await Geolocator.getCurrentPosition();
+      // final position = await Geolocator.getCurrentPosition();
       // flutter_location.Location location = flutter_location.Location();
       // final locationData = await location.getLocation();
 
-      return TIMCoordinate(position.latitude, position.longitude);
+      // return TIMCoordinate(position.latitude, position.longitude);
     }
     return null;
   }
